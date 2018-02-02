@@ -1,0 +1,63 @@
+Java中Math类常用函数总结
+
+	//取整，返回小于目标函数的最大整数,如下将会返回-2  
+	Math.floor(-1.8)；
+	
+	//取整，返回发育目标数的最小整数  
+	Math.ceil()
+	
+	//四舍五入取整  
+	Math.round()
+	
+	//计算平方根  
+	Math.sqrt()
+	
+	//计算立方根  
+	Math.cbrt()
+	
+	//返回欧拉数e的n次幂  
+	Math.exp(3);
+	
+	//计算乘方,下面是计算3的2次方  
+	Math.pow(3,2);
+	
+	//计算自然对数  
+	Math.log();
+	
+	//计算绝对值  
+	Math.abs();
+	
+	//计算最大值  
+	Math.max(2.3,4.5);
+	
+	//计算最小值  
+	Math.min(,);
+	
+	//返回一个伪随机数，该数大于等于0.0并且小于1.0  
+	Math.random
+	
+	
+Random比Math的random（）方法提供了更多的方式来生成各种伪随机数。
+
+	Random rand = new Random();
+	System.out.println("随机布尔数" + rand.nextBoolean());
+	
+	//生产一个含有16个数组元素的随机数数组  
+	byte[] buffer = new byte[16];
+	rand.nextBytes(buffer);
+	System.out.println(Arrays.toString(buffer));
+	
+	System.out.println("rand.nextDouble()" + rand.nextDouble());
+	
+	System.out.println("Float浮点数" + rand.nextFloat());
+	
+	System.out.println("rand.nextGaussian" + rand.nextGaussian());
+	
+	System.out.println("" + rand.nextInt());
+	
+	//生产一个0～32之间的随机整数  
+	System.out.println("rand.nextInt(32)" + rand.nextInt(32));
+	System.out.println("rand.nextLong" + rand.nextLong());
+	
+为了避免两个Random对象产生相同的数字序列，通常推荐使用当前时间作为Random对象的种子，代码如下：
+	Random  rand = new Random(System.currentTimeMillis());
